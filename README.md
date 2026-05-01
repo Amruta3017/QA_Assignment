@@ -61,15 +61,25 @@ qa-automation-assignment/
 
 ## Setup Instructions
 
+<<<<<<< HEAD
 ### Clone Repository
+=======
+###  Clone Repository
+>>>>>>> 06041a2 (Update framework)
 
 ```bash
 git clone https://github.com/Amruta3017/QA_Assignment.git
 cd QA_Assignment
+<<<<<<< HEAD
 ```
 ```
 
 # Create Virtual Environment
+=======
+```
+
+### Create Virtual Environment
+>>>>>>> 06041a2 (Update framework)
 
 ```bash
 python -m venv .venv
@@ -84,7 +94,11 @@ pip install selenium pytest
 
 ---
 
+<<<<<<< HEAD
 ##  How to Run Tests
+=======
+## How to Run Tests
+>>>>>>> 06041a2 (Update framework)
 
 Run all tests:
 
@@ -103,7 +117,27 @@ Run single test:
 ```bash
 pytest tests/test_login.py::test_valid_login
 ```
+Run the complete test suite using the following command:
 
+```bash
+pytest -v -s tests/ --html=reports/report_01may2026.html --self-contained-html
+```
+
+### Command Purpose
+
+- `-v` → Enables verbose mode for detailed test execution logs  
+- `-s` → Displays print statements in the console  
+- `tests/` → Specifies the test directory  
+- `--html=...` → Generates an HTML execution report  
+- `--self-contained-html` → Creates a standalone report file for easy sharing  
+
+### Output
+
+- Executes all test cases inside the `tests/` folder  
+- Displays execution details in the terminal  
+- Generates a professional HTML report inside the `reports/` directory  
+
+This helps in debugging, result analysis, and sharing execution outcomes with stakeholders.
 ---
 
 ## Test Scenarios Covered
@@ -117,7 +151,6 @@ pytest tests/test_login.py::test_valid_login
 * Empty username & password
 * Special characters input
 * Very long input values
-* Locked user login (if applicable)
 
 # Cart Test
 

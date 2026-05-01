@@ -78,10 +78,15 @@ def test_empty_username(setup):
     login.open_url(BASE_URL)
     login.login("", PASSWORD)
 
-    assert "Username is required" in login.get_error()
+    try:
+        assert "Username is required" in login.get_error()
+
+    except:
+        take_screenshot(driver, "empty_username_login_failed")
+        raise
 
 
-#Invalid login with wrong password
+#login with wrong password
 def test_empty_password(setup):
     driver = setup
     login = LoginPage(driver)
@@ -89,7 +94,13 @@ def test_empty_password(setup):
     login.open_url(BASE_URL)
     login.login(USERNAME, "")
 
-    assert "Password is required" in login.get_error()
+    try:
+        assert "Password is required" in login.get_error()
+
+    except:
+        take_screenshot(driver, "empty_password_login_failed")
+        raise
+
 
 #Enter Special characters
 def test_special_characters_login(setup):
@@ -99,7 +110,13 @@ def test_special_characters_login(setup):
     login.open_url(BASE_URL)
     login.login("@@@###", "$$$%%%")
 
-    assert "Username and password do not match" in login.get_error()
+    try:
+        assert "Username and password do not match" in login.get_error()
+
+    except:
+        take_screenshot(driver, "Special_characters_login_failed")
+        raise
+
 
 #Long input values
 def test_long_input_login(setup):
@@ -111,5 +128,11 @@ def test_long_input_login(setup):
     login.open_url(BASE_URL)
     login.login(long_text, long_text)
 
-    assert "Username and password do not match" in login.get_error()
+    try:
+        assert "Username and password do not match" in login.get_error()
+
+    except:
+        take_screenshot(driver, "long_input_login_failed")
+        raise
+
 
