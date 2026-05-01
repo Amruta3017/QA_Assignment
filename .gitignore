@@ -3,7 +3,5 @@ venv/
 .idea/
 __pycache__/
 *.pyc
-reports/
-screenshots/
 *.log
-
+.env
