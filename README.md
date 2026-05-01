@@ -61,21 +61,22 @@ qa-automation-assignment/
 
 ## Setup Instructions
 
-### 1️⃣ Clone Repository
+### Clone Repository
 
 ```bash
-git clone https://github.com/Amruta3017/qa-automation-assignment.git
-cd qa-automation-assignment
+git clone https://github.com/Amruta3017/QA_Assignment.git
+cd QA_Assignment
+```
 ```
 
-### 2️⃣ Create Virtual Environment
+# Create Virtual Environment
 
 ```bash
 python -m venv .venv
 .venv\Scripts\activate
 ```
 
-### 3️⃣ Install Dependencies
+### Install Dependencies
 
 ```bash
 pip install selenium pytest
@@ -83,7 +84,7 @@ pip install selenium pytest
 
 ---
 
-## ▶️ How to Run Tests
+##  How to Run Tests
 
 Run all tests:
 
